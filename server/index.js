@@ -21,7 +21,7 @@ const config = new Configuration({
 const openai = new OpenAIApi(config);
 
 //listening to port 3000
-app.listen("3000" , ()=>console.log("Server is running on port 3000"));
+app.listen(process.env.PORT || 3000, () => console.log(`Server is running on ${process.env.PORT || 3000}`))
 
 //dummy route to test 
 app.get('/', (req, res) => {
